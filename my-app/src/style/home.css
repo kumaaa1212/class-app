@@ -1,0 +1,49 @@
+.container{
+  width: 100%;
+  background-color: rgb(234, 234, 234)
+  ;
+}
+.heroarea{
+  width: 768px;
+  margin: 0 auto;
+  border: 1px grey solid;
+}
+.timetablearea {
+  display: flex;
+  height: 350px;
+  font-size: 30px;
+}
+.classNamelist li{
+  cursor: pointer;
+  width: 100px;
+  overflow: hidden;
+}
+.timeTitle {
+  width: 150px;
+}
+.classNamelist {
+  width: 600px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+.selectarea{
+  text-align: center;
+  height: 350px;
+}
+.AttendanceCheck{
+  margin-top: 70px;
+  height: 60px;
+}
+.btnarea{
+  border: 1x red solid;
+  display: flex;
+  margin-left: 300px;
+}
+.btn{
+  display: flex;
+  margin-right: 10px;
+}
+.selectshow h2{
+  margin: 20px 0;
+}

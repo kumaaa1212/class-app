@@ -1,0 +1,61 @@
+.container{
+  width: 100%;
+  background-color: rgb(234, 234, 234)
+  ;
+}
+.editbtn{
+  padding: 15px;
+}
+.heroarea{
+  width: 768px;
+  margin: 0 auto;
+  border: 1px grey solid;
+}
+.timetablearea {
+  display: flex;
+  height: 350px;
+  font-size: 30px;
+}
+.timetablearea p{
+  cursor: pointer;
+  width: 100px;
+  overflow: hidden;
+}
+.timeTitle {
+  width: 150px;
+}
+.classNamelist {
+  width: 600px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+.classNamelist input{
+  width: 70px;
+  height: 30px;
+  font-size: 25px;
+}
+.countarea{
+  background-color: rgb(234, 234, 234);
+  padding-bottom: 100px;
+}
+.allinput{
+  width: 300px;
+  margin-bottom: 20px;
+}
+.allinput input{
+  margin: 20px 10px;
+  width: 100px;
+  height: 30px;
+  font-size: 25px;
+}
+.possiblecount{
+  width: 300px;
+  margin-bottom: 20px;
+}
+.possiblecount p{
+  padding-left: 20px;
+  width: 100px;
+  height: 30px;
+  font-size: 25px;
+}
