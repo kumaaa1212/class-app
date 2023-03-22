@@ -1,0 +1,7 @@
+.container{
+  background-color: rgb(234, 234, 234);
+  padding-bottom: 100px;
+}
+.container li{
+  font-size: 30px;
+}
