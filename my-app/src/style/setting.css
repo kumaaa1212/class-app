@@ -1,6 +1,6 @@
 .container{
   width: 100%;
-  background-color: rgb(234, 234, 234)
+  background-color: rgb(255, 255, 255)
   ;
 }
 .editbtn{
@@ -9,7 +9,7 @@
 .heroarea{
   width: 768px;
   margin: 0 auto;
-  border: 1px grey solid;
+  border: 1px rgb(126, 126, 126) solid;
 }
 .timetablearea {
   display: flex;
@@ -35,8 +35,11 @@
   height: 30px;
   font-size: 25px;
 }
+.lists{
+  height: 45px;
+}
 .countarea{
-  background-color: rgb(234, 234, 234);
+  background-color: rgb(255, 255, 255);
   padding-bottom: 100px;
 }
 .allinput{
@@ -58,4 +61,7 @@
   width: 100px;
   height: 30px;
   font-size: 25px;
+}
+.reset{
+  margin-top: 30px;
 }

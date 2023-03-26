@@ -8,6 +8,10 @@ const Setting = () => {
   const [editlist, seteditlist] = useState(false)
   const handledit = () => {
     seteditlist(!editlist)
+    if (window.localStorage) {
+      const json = JSON.stringify(state, undefined, 1);
+      localStorage.setItem('key_name', json);
+    }
   }
   const handlechenge = (key, value, day,count) => {
     const findlist = state.find((list) => list.day === day)
@@ -45,25 +49,25 @@ const Setting = () => {
           </div>
           <div className='classNamelist'>
           {state.map((data) => (
-            <div key={data.day} className='list'>
+            <div key={data.day}>
               <p>{data.day}</p>
-              <ul className='lists'>
-                <li>
+              <ul>
+                <li className='lists'>
                   {editlist ? (<input value={data.one.clannname} onChange={(e) => handlechenge('one',e.target.value, data.day,data.one.atted)}></input>) : (<p>{data.one.clannname}</p>)}
                 </li>
-                <li>
+                <li className='lists'>
                   {editlist ? (<input value={data.two.clannname} onChange={(e) => handlechenge('two', e.target.value, data.day,data.two.atted)}></input>) : (<p>{data.two.clannname}</p>)}
                 </li>
-                <li>
+                <li className='lists'>
                   {editlist ? (<input value={data.three.clannname} onChange={(e) => handlechenge('three', e.target.value, data.day,data.three.atted)}></input>) : (<p>{data.three.clannname}</p>)}
                 </li>
-                <li>
+                <li className='lists'>
                   {editlist ? (<input value={data.four.clannname} onChange={(e) => handlechenge('four', e.target.value, data.day,data.four.atted)}></input>) : (<p>{data.four.clannname}</p>)}
                 </li>
-                <li>
+                <li className='lists'>
                   {editlist ? (<input value={data.five.clannname} onChange={(e) => handlechenge('five', e.target.value, data.day,data.five.atted)}></input>) : (<p>{data.five.clannname}</p>)}
                 </li>
-                <li>
+                <li className='lists'>
                   {editlist ? (<input value={data.six.clannname} onChange={(e) => handlechenge('six', e.target.value, data.day,data.five.atted)}></input>) : (<p>{data.six.clannname}</p>)}
                 </li>
               </ul>
