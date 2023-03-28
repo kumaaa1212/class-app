@@ -12,6 +12,12 @@ import Signout from './component/Signout';
 export const Myclass = createContext();
 function App() {
   const [state, setstate] = useState(TimetableData);
+  useEffect(() =>{
+    if (window.localStorage) {
+      const json = localStorage.getItem('key_name');
+        setstate(JSON.parse(json));
+    }
+  },[])
 const [user] =useAuthState(auth);
   return (
     <div className='conitaner'>
