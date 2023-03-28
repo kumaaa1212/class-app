@@ -1,12 +1,12 @@
 .container{
   width: 100%;
-  background-color: rgb(234, 234, 234)
+  background-color: rgb(255, 255, 255)
   ;
 }
 .heroarea{
   width: 768px;
   margin: 0 auto;
-  border: 1px grey solid;
+  border: 1px rgb(126, 126, 126) solid;
 }
 .timetablearea {
   display: flex;
