@@ -6,7 +6,7 @@ import { TimetableData } from './countdata';
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 export const Myclass = createContext();
 function App() {
-  const [state, setstate] = useState(TimetableData);
+  const [state, setstate] = useState(TimetableData,[]);
   useEffect(() => {
     if (window.localStorage) {
       const json = localStorage.getItem('key_name');
