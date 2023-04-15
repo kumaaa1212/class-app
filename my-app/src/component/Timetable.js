@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Myclass } from '../App'
 import Button from '@mui/material/Button';
 const Timetable = ({ cautoinstate, setcautoinstate, notionstate, setnotionstate }) => {
@@ -27,7 +27,7 @@ const Timetable = ({ cautoinstate, setcautoinstate, notionstate, setnotionstate 
       default: return showclass
     }
   }
-  const keepData = async (key, day, time, id, count, possicount, result) => {
+  const keepData = (key, day, time, id, count, possicount, result) => {
     const upDataClass = state.filter((list) => list.day === day);
     const takeArry = upDataClass.shift();
     const chengeObj = {
@@ -76,20 +76,20 @@ const Timetable = ({ cautoinstate, setcautoinstate, notionstate, setnotionstate 
           </div>
           <div className='classNamelist'>
             {state.map((list) => (
-              <div key={list.day}>
+                <div key={list.day}>
                 <p>{list.day}</p>
                 <ul>
-                  <li onClick={() => handleshow(Object.keys(list)[1], list.day, list.one, list.one.clannname, list.one.atted, list.one.noatted, list.one.nowattend, list.one.absent)} className='lists'>{list.one.clannname}</li>
-                  <li onClick={() => handleshow(Object.keys(list)[2], list.day, list.two, list.two.clannname, list.two.atted, list.two.noatted, list.two.nowattend, list.two.absent)} className='lists'>{list.two.clannname}</li>
-                  <li onClick={() => handleshow(Object.keys(list)[3], list.day, list.three, list.three.clannname, list.three.atted, list.three.noatted, list.three.nowattend, list.three.absent)} className='lists'>{list.three.clannname}</li>
-                  <li onClick={() => handleshow(Object.keys(list)[4], list.day, list.four, list.four.clannname, list.four.atted, list.four.noatted, list.four.nowattend, list.four.absent)} className='lists'>{list.four.clannname}</li>
-                  <li onClick={() => handleshow(Object.keys(list)[5], list.day, list.five, list.five.clannname, list.five.atted, list.five.noatted, list.five.nowattend, list.five.absent)} className='lists'>{list.five.clannname}</li>
-                  <li onClick={() => handleshow(Object.keys(list)[6], list.day, list.six, list.six.clannname, list.six.atted, list.six.noatted, list.six.nowattend, list.six.absent)} className='lists'>{list.six.clannname}</li>
+                <li onClick={() => handleshow(Object.keys(list)[1], list.day, list.one, list.one.clannname, list.one.atted, list.one.noatted, list.one.nowattend, list.one.absent)} className='lists'>{list.one.clannname}</li>
+                <li onClick={() => handleshow(Object.keys(list)[2], list.day, list.two, list.two.clannname, list.two.atted, list.two.noatted, list.two.nowattend, list.two.absent)} className='lists'>{list.two.clannname}</li>
+                <li onClick={() => handleshow(Object.keys(list)[3], list.day, list.three, list.three.clannname, list.three.atted, list.three.noatted, list.three.nowattend, list.three.absent)} className='lists'>{list.three.clannname}</li>
+                <li onClick={() => handleshow(Object.keys(list)[4], list.day, list.four, list.four.clannname, list.four.atted, list.four.noatted, list.four.nowattend, list.four.absent)} className='lists'>{list.four.clannname}</li>
+                <li onClick={() => handleshow(Object.keys(list)[5], list.day, list.five, list.five.clannname, list.five.atted, list.five.noatted, list.five.nowattend, list.five.absent)} className='lists'>{list.five.clannname}</li>
+                <li onClick={() => handleshow(Object.keys(list)[6], list.day, list.six, list.six.clannname, list.six.atted, list.six.noatted, list.six.nowattend, list.six.absent)} className='lists'>{list.six.clannname}</li>
                 </ul>
-              </div>
-            ))}
-          </div>
-        </div>
+                </div>
+                ))}
+                </div>
+                </div>
       </section>
       <section className='selectarea'>
         <div className='AttendanceCheck'>{showclass ? (<div className='btnarea'>
