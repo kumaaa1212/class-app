@@ -75,7 +75,7 @@ const Timetable = ({ cautoinstate, setcautoinstate, notionstate, setnotionstate 
             </ul>
           </div>
           <div className='classNamelist'>
-            {state.map((list) => (
+            {state && state.map((list) => (
                 <div key={list.day}>
                 <p>{list.day}</p>
                 <ul>
