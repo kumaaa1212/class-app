@@ -7,12 +7,14 @@ import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 export const Myclass = createContext();
 function App() {
   const [state, setstate] = useState(TimetableData);
-  // useEffect(() => {
-  //   if (window.localStorage) {
-  //     const json = localStorage.getItem('key_name');
-  //     setstate(JSON.parse(json));
-  //   }
-  // }, []);
+  useEffect(() => {
+    if (window.localStorage) {
+      const json = localStorage.getItem('key_name');
+      if (json) {
+        setstate(JSON.parse(json));
+      }
+    }
+  }, []);
   return (
     <div className='conitaner'>
       <h1 className='maintitle'>Make the most of your time in college</h1>
