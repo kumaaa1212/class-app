@@ -33,7 +33,6 @@ const Timetable = ({ cautoinstate, setcautoinstate, notionstate, setnotionstate 
     const chengeObj = {
       [key]: { ...time, clannname: id, atted: count, noatted: possicount, nowattend: showclass.nowcount, absent: showclass.nowabsent, pass: result }
     }
-    console.log(chengeObj);
     const chengeobjtarget = Object.assign(takeArry, chengeObj);
     const keepclasslist = state.map((data) => {
       if (data.day === chengeobjtarget.day) {

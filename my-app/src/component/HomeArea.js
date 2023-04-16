@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import CaveatArea from './CaveatArea';
 import Timetable from './Timetable';
 import '../style/home.css'
 const HomeArea = () => {
-  const [cautoinstate,setcautoinstate] =useState([]);
-  const [notionstate,setnotionstate] =useState([]);
+  const [cautoinstate, setcautoinstate] = useState([]);
+  const [notionstate, setnotionstate] = useState([]);
   return (
     <div>
       <Timetable cautoinstate={cautoinstate} setcautoinstate={setcautoinstate} notionstate={notionstate} setnotionstate={setnotionstate}/>
